@@ -36,7 +36,8 @@ public class Functions {
     public static String singleObject(String id){
         return RestAssured
                 .given()
-                .baseUri(baseUri+id)
+                .baseUri(baseUri)
+                .basePath("/"+id)
                 .get()
                 .then()
                 .log()
