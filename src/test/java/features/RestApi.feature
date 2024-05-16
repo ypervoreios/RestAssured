@@ -9,3 +9,9 @@ Feature: Rest API testing
     |num|
     |7|
     |3|
+
+  Scenario: Add new object
+    Given Add new object to catalog
+    When Update the object with color
+    And Partial update the name of the object
+    Then Delete object
